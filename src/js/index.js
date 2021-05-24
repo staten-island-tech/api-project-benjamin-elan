@@ -10,7 +10,7 @@ const query = async function () {
         console.log(data);
     } catch (error) {
         console.log(error);
-        alert("CANDICE");
+        alert("HOT DOG HOT DOG HOT DIGGITY DOG!!!");
     }
 
 };

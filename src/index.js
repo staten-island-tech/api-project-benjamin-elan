@@ -18,20 +18,20 @@ const query = async function () {
           <img
             src="https://cdn2.thedogapi.com/images/${dog.image.id}.jpg"
             alt=""
-            class="poster"
+            class="dog-card"
           />
         </div>
         
           <div class="dog-card-back">
             <h3 class="dog-card-name">${dog.name}</h3>
             <div class="dog-group">
-              <p class="dog-card-group">${dog.breed_group}</p>
+              <p class="dog-card-group">Group: ${dog.breed_group}</p>
             </div>
             <div class="lifespan">
-               <p class="dog-card-lifespan">${dog.life_span}</p>
+               <p class="dog-card-lifespan">Life Span: ${dog.life_span}</p>
             </div>
             <div class="dog-origin">
-            <p class="dog-card-origin">${dog.origin}</p>
+            <p class="dog-card-origin">Origin: ${dog.origin}</p>
               <li class="dog-group">Sci-Fi</li>
               <li class="dog-group">Fantasy</li>
               <li class="dog-group">Horror</li>

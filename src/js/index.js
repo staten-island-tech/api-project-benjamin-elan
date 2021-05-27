@@ -1,18 +1,19 @@
-// import { DOMSelectors } from "./DOM";
+import { DOMSelectors } from "./DOM";
 // import { genres } from "./genre";
 
-const dogs = "https://api.thedogapi.com/v1/breeds";
 const key = "x-a44dd5f8-f213-461b-8bab-2dba83d70530";
 
 const query = async function () {
-  try { 
-    const response = await fetch(dogs);
+  try {
+    const response = await fetch("https://api.thedogapi.com/v1/breeds=${key}");
     const data = await response.json();
     data.results.forEach((dog) => {
-        DOMSelectors.grid.insertAdjacentHTML("beforeend", `<div class="movie-card">
-        <div class="movie-card-front">
+      DOMSelectors.grid.insertAdjacentHTML(
+        "beforeend",
+        `<div class="dog-card">
+        <div class="dog-card-front">
           <img
-            src="https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
+            src="${dog.image}"
             alt=""
             class="poster"
           />
@@ -22,11 +23,9 @@ const query = async function () {
           <div class="dog-group">
             <p class="dog-card-group">${dog.breed_group}</p>
           </div>
-
-          <div class="release-box">
+          <div class="lifespan">
              <p class="dog-card-lifespan">${dog.life_span}</p>
           </div>
-
           <div class="dog-origin">
           <p class="dog-card-origin">${dog.origin}</p>
             <li class="dog-group">Sci-Fi</li>
@@ -34,12 +33,12 @@ const query = async function () {
             <li class="dog-group">Horror</li>
           </div>
         </div>
-      </div>`);
+      </div>`
+      );
     });
-   } catch (error) {
+  } catch (error) {
     console.log(error);
     alert("HOT DOG HOT DOG HOT DIGGITY DOG!!!");
-    }   
+  }
 };
-    
 query();

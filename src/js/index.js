@@ -5,7 +5,7 @@ const dogs = "https://api.thedogapi.com/v1/breeds";
 const key = "x-a44dd5f8-f213-461b-8bab-2dba83d70530";
 
 const query = async function () {
-  try {
+  try { 
     const response = await fetch(dogs);
     const data = await response.json();
     data.results.forEach((dog) => {
@@ -18,18 +18,17 @@ const query = async function () {
           />
         </div>
         <div class="dog-card-back">
-          <h3 class="dog-card-header">${dog.breed_group}</h3>
-          <div class="score-box">
-            <p class="user-score">Community Score</p>
-            <p class="user-score">8.4</p>
+          <h3 class="dog-card-name">${dog.name}</h3>
+          <div class="dog-group">
+            <p class="dog-card-group">${dog.breed_group}</p>
           </div>
 
           <div class="release-box">
-            <p class="release-date">Released</p>
-            <p class="release-date">2020-06-12</p>
+             <p class="dog-card-lifespan">${dog.life_span}</p>
           </div>
 
-          <div class="dog-group">
+          <div class="dog-origin">
+          <p class="dog-card-origin">${dog.origin}</p>
             <li class="dog-group">Sci-Fi</li>
             <li class="dog-group">Fantasy</li>
             <li class="dog-group">Horror</li>
@@ -37,11 +36,10 @@ const query = async function () {
         </div>
       </div>`);
     });
-    catch (error) {
+   } catch (error) {
     console.log(error);
     alert("HOT DOG HOT DOG HOT DIGGITY DOG!!!");
-        };   
-    };
+    }   
 };
     
 query();

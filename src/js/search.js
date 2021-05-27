@@ -3,12 +3,15 @@ import { genres } from "./genre";
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
+    console.log("submit");
     e.preventDefault();
     const searchParams = DOMSelectors.searchArea.value;
+    console.log(searchParams);
     const searchQuery = async function () {
+      console.log("async");
       try {
         let response = await fetch(
-          `https://api.thedogapi.com/v1/breeds?api_key=${key}`
+          `https://api.thedogapi.com/v1/breeds/search?api_key=${key}`
         );
         let data = await response.json();
         console.log(data);
@@ -43,10 +46,14 @@ const listen = function () {
               </div>`
           );
         });
+       
       } catch (error) {
         console.log(error);
         alert("HOT DOG HOT DOG HOT DIGGITY DOG!!!");
       }
     };
+    searchQuery();
   });
 };
+
+listen();

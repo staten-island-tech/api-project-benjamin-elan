@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  text-shadow: -0.2rem -0.2rem 0 #000, 0.2rem -0.2rem 0 #000, -0.2rem 0.2rem 0 #000, 0.2rem 0.2rem 0 #000;
+  text-shadow: -0.2rem -0.2rem 0 #000, 0.2rem -0.2rem 0 #000, -0.2rem 0.2rem 0 #000, 0.2rem 0.2rem 0 #000;
   font-family: Arial;
   font-size: 10rem;
   margin: 3rem auto;
@@ -24,7 +24,7 @@ body {
 }
 
 .top-rated {
-  text-shadow: -0.2rem -0.2rem 0 #000, 0.2rem -0.2rem 0 #000, -0.2rem 0.2rem 0 #000, 0.2rem 0.2rem 0 #000;
+  text-shadow: -0.2rem -0.2rem 0 #000, 0.2rem -0.2rem 0 #000, -0.2rem 0.2rem 0 #000, 0.2rem 0.2rem 0 #000;
   font-family: Arial;
   margin: 1rem auto 2rem;
   text-align: center;
@@ -53,7 +53,7 @@ body {
 
 .dog-card {
   margin-top: 1rem;
-  height: 80vh;
+  height: 85vh;
   width: 90vw;
   position: relative;
   border-radius: 5rem;

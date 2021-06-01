@@ -2,7 +2,6 @@ import { DOMSelectors } from "./js/DOM.js";
 // import { genres } from "./js/genre.js";
 
 const key = "x-a44dd5f8-f213-461b-8bab-2dba83d70530";
-// headers["x-a44dd5f8-f213-461b-8bab-2dba83d70530"] = key;
 const query = async function () {
   try {
     let response = await fetch(

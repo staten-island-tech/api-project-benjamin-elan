@@ -18,7 +18,7 @@ body {
   text-shadow: -0.2rem -0.2rem 0 #000, 0.2rem -0.2rem 0 #000,
     -0.2rem 0.2rem 0 #000, 0.2rem 0.2rem 0 #000;
   font-family: Arial;
-  font-size: 5.2rem;
+  font-size: 10rem;
   margin: 3rem auto;
   text-align: center;
   color: orange;
@@ -38,18 +38,19 @@ body {
   justify-content: space-around;
   width: 97.5%;
   border: black 0.5rem solid;
-  border-radius: 2rem;
+  border-radius: 5rem;
   background-color: orange;
   margin: 2rem auto;
   padding: 2rem auto;
   align-items: center;
 }
 .dog-card {
-  height: 60vh;
-  width: 40vw;
+  margin-top: 1rem;
+  height: 85vh;
+  width: 90vw;
   position: relative;
-  border: black solid 0.4rem;
-  border-radius: 0.3rem;
+  //   border: black solid 0.4rem;
+  border-radius: 5rem;
   background-image: image;
   background-position: center;
   background-size: cover;
@@ -120,8 +121,18 @@ body {
 .dog-card:hover .dog-card-back {
   z-index: 3;
   display: flex;
+  margin-top: 1rem;
+  border-radius: 5rem;
 }
 .test {
   color: rgb(0, 0, 0);
   font-size: 3rem;
+}
+
+.dog-card-origin {
+  font-size: 2rem;
+}
+
+.dog-card-group {
+  font-size: 2rem;
 }

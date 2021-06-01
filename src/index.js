@@ -32,9 +32,6 @@ const query = async function () {
             </div>
             <div class="dog-origin">
             <p class="dog-card-origin">Origin: ${dog.origin}</p>
-              <li class="dog-group">Sci-Fi</li>
-              <li class="dog-group">Fantasy</li>
-              <li class="dog-group">Horror</li>
             </div>
           </div>
         </div>

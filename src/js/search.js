@@ -1,27 +1,31 @@
 import { DOMSelectors } from "./DOM";
-import { genres } from "./genre";
-
+// import { genres } from "./genre";
+const key = "x-a44dd5f8-f213-461b-8bab-2dba83d70530";
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (e) {
-    console.log("submit");
+    console.log("pressed submit");
     e.preventDefault();
+    DOMSelectors.grid.innerHTML=""
     const searchParams = DOMSelectors.searchArea.value;
-    console.log(searchParams);
+    console.log("my input is "+ searchParams);
     const searchQuery = async function () {
-      console.log("async");
+    console.log("running search async");
       try {
-        let response = await fetch(
-          `https://api.thedogapi.com/v1/breeds/search?api_key=${key}`
+        const response = await fetch(
+          `https://api.thedogapi.com/v1/breeds/search?api_key=${key}&q=${searchParams}`
+          // `https://api.thedogapi.com/v1/breeds?api_key=${key}`
         );
-        let data = await response.json();
+        const data = await response.json();
         console.log(data);
         data.forEach((dog) => {
+          console.log(dog);
           DOMSelectors.grid.insertAdjacentHTML(
             "beforeend",
+            // `<div><h3>test</h3></div>`
             `<div class="dog-card">
               <div class="dog-card-front">
                 <img
-                  src="https://cdn2.thedogapi.com/images/${dog.image.id}.jpg"
+                  src="https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg"
                   alt=""
                   class="dog-card"
                 />
@@ -37,9 +41,6 @@ const listen = function () {
                   </div>
                   <div class="dog-origin">
                   <p class="dog-card-origin">Origin: ${dog.origin}</p>
-                    <li class="dog-group">Sci-Fi</li>
-                    <li class="dog-group">Fantasy</li>
-                    <li class="dog-group">Horror</li>
                   </div>
                 </div>
               </div>
